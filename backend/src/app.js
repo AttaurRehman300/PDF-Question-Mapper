@@ -93,16 +93,16 @@ app.use('*', (req, res) => {
 module.exports = app;
 
 // Local development only (won't run on Vercel)
-if (require.main === module) {
-  const PORT = process.env.PORT || 5000;
+// if (require.main === module) {
+//   const PORT = process.env.PORT || 5000;
   
-  // Optional MongoDB
-  if (process.env.MONGODB_URI) {
-    const mongoose = require('mongoose');
-    mongoose.connect(process.env.MONGODB_URI)
-      .then(() => console.log('✅ MongoDB connected'))
-      .catch(err => console.log('⚠️ MongoDB not connected'));
-  }
+//   // Optional MongoDB
+//   if (process.env.MONGODB_URI) {
+//     const mongoose = require('mongoose');
+//     mongoose.connect(process.env.MONGODB_URI)
+//       .then(() => console.log('✅ MongoDB connected'))
+//       .catch(err => console.log('⚠️ MongoDB not connected'));
+//   }
   
   app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
