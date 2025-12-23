@@ -17,7 +17,7 @@ app.use(helmet());
 
 // CORS
 app.use(cors({
-  origin:  ['https://pdf-question-mapper-r6jp.vercel.app', 'http://localhost:3000'],
+  origin:  ['https://pdf-question-mapper-frontend.vercel.app', 'http://localhost:3000'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 }));
